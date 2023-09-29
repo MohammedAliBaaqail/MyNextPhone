@@ -1,0 +1,64 @@
+{
+    name: 'Apple iPhone 13 Pro Max',
+    img: 'https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro-max.jpg',
+    detailSpec: [
+      { category: 'Network', specifications: [
+  { name: 'Technology', value: 'GSM / CDMA / HSPA / EVDO / LTE / 5G' },
+  {
+    name: '2G bands',
+    value: 'GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2 (dual-SIM)'
+  },
+  { name: ' ', value: 'CDMA 800 / 1900 ' },
+  {
+    name: '3G bands',
+    value: 'HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100 '
+  },
+  { name: ' ', value: 'CDMA2000 1xEV-DO ' },
+  {
+    name: '4G bands',
+    value: '1, 2, 3, 4, 5, 7, 8, 12, 13, 17, 18, 19, 20, 25, 26, 28, 30, 32, 34, 38, 39, 40, 41, 42, 46, 48, 66 - A2643, A2644, A2645'
+  },
+  {
+    name: ' ',
+    value: '1, 2, 3, 4, 5, 7, 8, 11, 12, 13, 14, 17, 18, 19, 20, 21, 25, 26, 28, 29, 30, 32, 34, 38, 39, 40, 41, 42, 46, 48, 66, 71 - A2484, A2641'
+  },
+  {
+    name: '5G bands',
+    value: '1, 2, 3, 5, 7, 8, 12, 20, 25, 28, 30, 38, 40, 41, 48, 66, 77, 78, 79 SA/NSA/Sub6 - A2643, A2644'
+  },
+  {
+    name: ' ',
+    value: '1, 2, 3, 5, 7, 8, 12, 20, 25, 28, 29, 30, 38, 40, 41, 48, 66, 71, 78, 79, 258, 260, 261 SA/NSA/Sub6/mmWave - A2484'
+  },
+  {
+    name: ' ',
+    value: '1, 2, 3, 5, 7, 8, 12, 20, 25, 28, 29, 30, 38, 40, 41, 48, 66, 71, 77, 78, 79 SA/NSA/Sub6 - A2641'
+  },
+  { name: 'Speed', value: 'HSPA, LTE-A, 5G, EV-DO Rev.A 3.1 Mbps' }
+]
+ },
+      { category: 'Launch', specifications: [Array] },
+      { category: 'Body', specifications: [Array] },
+      { category: 'Display', specifications: [Array] },
+      { category: 'Platform', specifications: [Array] },
+      { category: 'Memory', specifications: [Array] },
+      { category: 'Main Camera', specifications: [Array] },
+      { category: 'Selfie camera', specifications: [Array] },
+      { category: 'Sound', specifications: [Array] },
+      { category: 'Comms', specifications: [Array] },
+      { category: 'Features', specifications: [Array] },
+      { category: 'Battery', specifications: [Array] },
+      { category: 'Misc', specifications: [Array] },
+      { category: 'Tests', specifications: [Array] }
+    ],
+    quickSpec: [
+      { name: 'Display size', value: '6.7"' },
+      { name: 'Display resolution', value: '1284x2778 pixels' },
+      { name: 'Camera pixels', value: '12MP\n      ' },
+      { name: 'Video pixels', value: '2160p' },
+      { name: 'RAM size', value: '6GB RAM' },
+      { name: 'Chipset', value: 'Apple A15 Bionic' },
+      { name: 'Battery size', value: '4352mAh' },
+      { name: 'Battery type', value: 'Li-Ion' }
+    ]
+  }
