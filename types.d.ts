@@ -23,14 +23,32 @@ type deviceDetails = {
       }
     ],
     "detailSpec": [
-      {
-        "category": string,
-        "specifications": [
-          {
-            "name": string,
-            "value": string
-          }
-        ]
-      }
+   
+
+      { category: string, specifications: [Array] },
+      { category: string, specifications: [Array] },
+      { category: string, specifications: [Array] },
+      { category: string, specifications: [Array] },
+      { category: string, specifications: [Array] },
+      { category: string, specifications: [Array] },
+      { category: string, specifications: [Array] },
+      { category: string, specifications: [Array] },
+      { category: string, specifications: [Array] },
+      { category: string, specifications: [Array] },
+      { category: string, specifications: [Array] },
+      { category: string, specifications: [Array] },
+      { category: string, specifications: [Array] },
+      { category: string, specifications: [Array] }
     ]
   }
+
+  type topDevices = [
+    {
+      "category": string,
+      "list": [Array]
+    },
+    {
+        "category": string,
+        "list": [Array]
+      }
+  ]

@@ -62,3 +62,8 @@
       { name: 'Battery type', value: 'Li-Ion' }
     ]
   }
+
+
+
+
+  

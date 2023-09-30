@@ -2,25 +2,29 @@
 import Image from "next/image"
 import getAllBrands from "@/lib/getAllBrands"
 import getDeviceListByBrand from "@/lib/getDeviceListByBrand"
+import getTopDevices from "@/lib/getTopDevices"
+import TopDevices from "./components/topDevices"
 import Link from "next/link"
 
 export default async function Home() {
 
   
 
-  const brandsData : Promise<brand[]> = getAllBrands()
-  const brands = await brandsData
+  // const brandsData : Promise<brand[]> = getAllBrands()
+  // const brands = await brandsData
 
-  const deviceListByBrandData : Promise<deviceListByBrand[]> = getDeviceListByBrand('apple-phones-48')
-  const deviceListByBrand = await deviceListByBrandData
+   
 
-  console.log("hello")
+  // const deviceListByBrandData : Promise<deviceListByBrand[]> = getDeviceListByBrand('apple-phones-48')
+  // const deviceListByBrand = await deviceListByBrandData
+
+ 
 
 
 
   return (
-    <main className="min-h-screen dark:bg-slate-950 dark:text-white ">
-      GG
+    <main className="min-h-screen  ">
+      {/* GG
       <hr className="opacity-60 sm:max-w-lg " />
       {deviceListByBrand.map(brand => {
         return (
@@ -31,7 +35,9 @@ export default async function Home() {
           </>
         )
       }
-      )}
+      )} */}
+
+      <TopDevices/>
     </main>
   )
 }
