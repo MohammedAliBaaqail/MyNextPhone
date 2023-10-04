@@ -1,100 +1,28 @@
+"use client"
+
+import Link from "next/link";
 import React from "react";
+import Search from "./search";
 
 export default function navBar() {
   return (
 <nav
-  className="relative flex w-full flex-nowrap items-center justify-between bg-sky-600 py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700  lg:flex-wrap lg:justify-start lg:py-4"
+  className="relative flex w-full flex-nowrap items-center justify-between bg-sky-500 py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700  lg:flex-wrap lg:justify-start lg:py-4"
   data-te-navbar-ref>
-  <div className="flex w-full flex-wrap items-center justify-between px-3">
-    <div className="ml-2">
-      <a className="text-xl text-neutral-800 " href="/"
-        >Navbar</a>
-    </div>
-    {/* <!-- Hamburger button for mobile view --> */}
-    <button
-      className="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0  lg:hidden"
-      type="button"
-      data-te-collapse-init
-      data-te-target="#navbarSupportedContent14"
-      aria-controls="navbarSupportedContent14"
-      aria-expanded="false"
-      aria-label="Toggle navigation">
-      {/* <!-- Hamburger icon --> */}
-      <span className="[&>svg]:w-7">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          className="h-7 w-7">
-          <path
-            fillRule="evenodd"
-            d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-            clipRule="evenodd" />
-        </svg>
-      </span>
-    </button>
-
-    {/* <!-- Collapsible navbar container --> */}
-    <div
-      className="!visible mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"
-      id="navbarSupportedContent14"
-      data-te-collapse-item>
-      {/* <!-- Left links --> */}
-      <ul
-        className="list-style-none mr-auto flex flex-col pl-0 lg:mt-1 lg:flex-row"
-        data-te-navbar-nav-ref>
-        {/* <!-- Home link --> */}
-        <li
-          className="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
-          data-te-nav-item-ref>
-          <a
+    <Link className="text-xl text-neutral-800 " href="/"
+        >Navbar</Link>
+        <Link
             className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 "
             aria-current="page"
             href="/brands"
             data-te-nav-link-ref
-            >Brands</a>
-        </li>
-        {/* <!-- Link --> */}
-        <li
-          className="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
-          data-te-nav-item-ref>
-          <a
+            >Brands</Link>
+     <Link
             className="p-0 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none  lg:px-2 [&.active]:text-black/90 "
             href="#"
             data-te-nav-link-ref
-            >Link</a>
-        </li>
-        {/* <!-- Disabled link --> */}
-        <li
-          className="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
-          data-te-nav-link-ref>
-          <a
-            className="text-black/30 lg:px-2 [&.active]:text-black/90 "
-            >Disabled</a>
-          
-        </li>
-      </ul>
-      <div className="w-[300px] lg:pr-2">
-        <div className="relative flex w-full flex-wrap items-stretch">
-          <input
-            type="search"
-            className="relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none motion-reduce:transition-none "
-            placeholder="Search"
-            aria-label="Search"
-            aria-describedby="button-addon3" />
-
-          {/* <!--Search button--> */}
-          <button
-            className="relative z-[2] rounded-r border-2 border-primary px-6 py-2 text-xs font-medium uppercase text-primary transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 motion-reduce:transition-none"
-            type="button"
-            id="button-addon3"
-            data-te-ripple-init>
-            Search
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+            >Link</Link>
+  <Search/>
 </nav>
   );
 }

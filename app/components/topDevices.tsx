@@ -1,28 +1,40 @@
 import getTopDevices from '@/lib/getTopDevices'
+import Link from 'next/link'
+import DeviceCard from './deviceCard'
+
+import { notFound } from "next/navigation";
+
 
 
 export default async function topDevices() {
 
     const topDevicesData : Promise<topDevices> = getTopDevices()
     const topDevices = await topDevicesData
-    console.log(topDevices[1].list)
+    // console.log(topDevices[1].list)
+    if (!topDevices) return notFound()
   return (
     <div>
+        
         {
         topDevices.map((devicesList)=>{
             return(
-             <div>
+             <>
              {<h2 className='text-3xl'>{devicesList.category}</h2>}
+             <div>
              {devicesList.list.map((device)=>{
                 return(
-                    <div>
-                   <h3>{device.name}</h3> 
+                    
+                    <Link href={`/devices/${device.id}`}>
+                    
+                   <DeviceCard deviceId={device.id} name={device.name} />
                    {/* <h3>{device.dailyHits|device.favorites}</h3> */}
-                   </div>
+                   </Link>
+                  
                 )
              }
              )}
-             </div>)
+              </div>
+             </>)
              }
              )
              }

@@ -1,9 +1,11 @@
-const gsmarena = require('gsmarena-api');
+const gsmarena = require("gsmarena-api");
 
 export default async function getDeviceListByBrand(brandName: string) {
-const res = await gsmarena.catalog.getBrand(brandName);
+  try {
+    const res = await gsmarena.catalog.getBrand(brandName);
 
-  if (!res)
-    throw new Error("Somethin went wrong!")
-  return res
+    return res;
+  } catch (error) {
+    return undefined;
+  }
 }

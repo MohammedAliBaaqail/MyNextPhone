@@ -23,21 +23,9 @@ export default async function Home() {
 
 
   return (
-    <main className="min-h-screen  ">
-      {/* GG
-      <hr className="opacity-60 sm:max-w-lg " />
-      {deviceListByBrand.map(brand => {
-        return (
-          <>
-          <h3 key ={brand.id}>{brand.name}</h3>
-          <Image src={brand.img} alt = {brand.name} width={100} height={100}/>
-          <h5>{brand.description}</h5>
-          </>
-        )
-      }
-      )} */}
+    <div className="min-h-screen">
 
       <TopDevices/>
-    </main>
+    </div>
   )
 }

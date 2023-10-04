@@ -23,23 +23,72 @@ type deviceDetails = {
       }
     ],
     "detailSpec": [
-   
 
-      { category: string, specifications: [Array] },
-      { category: string, specifications: [Array] },
-      { category: string, specifications: [Array] },
-      { category: string, specifications: [Array] },
-      { category: string, specifications: [Array] },
-      { category: string, specifications: [Array] },
-      { category: string, specifications: [Array] },
-      { category: string, specifications: [Array] },
-      { category: string, specifications: [Array] },
-      { category: string, specifications: [Array] },
-      { category: string, specifications: [Array] },
-      { category: string, specifications: [Array] },
-      { category: string, specifications: [Array] },
-      { category: string, specifications: [Array] }
-    ]
+        {
+            category: String,
+            specifications: [
+              { name: String, value: String },
+              { name: String, value: String }
+            ]
+          },
+          {
+            category: String,
+            specifications: [
+              { name: String, value: String },
+              { name: String, value: String }
+            ]
+          },
+          {
+            category: String,
+            specifications: [
+              { name: String, value: String },
+              { name: String, value: String }
+            ]
+          },
+          {
+            category: String,
+            specifications: [
+              { name: String, value: String },
+              { name: String, value: String }
+            ]
+          },
+          {
+            category: String,
+            specifications: [
+              { name: String, value: String },
+              { name: String, value: String }
+            ]
+          },
+          {
+            category: String,
+            specifications: [
+              { name: String, value: String },
+              { name: String, value: String }
+            ]
+          },
+          {
+            category: String,
+            specifications: [
+              { name: String, value: String },
+              { name: String, value: String }
+            ]
+          },
+          {
+            category: String,
+            specifications: [
+              { name: String, value: String },
+              { name: String, value: String }
+            ]
+          },
+          {
+            category: String,
+            specifications: [
+              { name: String, value: String },
+              { name: String, value: String }
+            ]
+          },
+        
+      ]
   }
 
   type topDevices = [
@@ -52,3 +101,5 @@ type deviceDetails = {
         "list": [Array]
       }
   ]
+
+  
