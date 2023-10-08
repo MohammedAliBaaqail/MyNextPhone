@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "debug": "^4.3.4",
     "gsmarena-api": "^2.0.4",
     "next": "latest",

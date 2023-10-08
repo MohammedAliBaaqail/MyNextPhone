@@ -1,4 +1,4 @@
-import getDeviceDetails from "@/lib/getDeviceDetails";
+import getDeviceDetails from "@/api/getDeviceDetails";
 import type { Metadata } from "next";
 import Image from "next/image";
 import placeHolderData from "./data.json"

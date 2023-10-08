@@ -1,10 +1,13 @@
 
 import Image from "next/image"
-import getAllBrands from "@/lib/getAllBrands"
-import getDeviceListByBrand from "@/lib/getDeviceListByBrand"
-import getTopDevices from "@/lib/getTopDevices"
+import getAllBrands from "@/api/getAllBrands"
+import getDeviceListByBrand from "@/api/getDeviceListByBrand"
+import getTopDevices from "@/api/getTopDevices"
 import TopDevices from "./components/topDevices"
 import Link from "next/link"
+
+
+
 
 export default async function Home() {
 
@@ -24,7 +27,7 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen">
-
+        
       <TopDevices/>
     </div>
   )

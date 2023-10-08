@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 
-import NavBar from "./components/navBar";
+import NavBar from "./components/NavBar";
 
 export const metadata: Metadata = {
   title: "My Next Phone",

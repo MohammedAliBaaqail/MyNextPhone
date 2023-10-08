@@ -1,28 +1,28 @@
 type brand = {
    
-        "id": string,
-        "name": string,
-        "devices": number
+        id: string,
+        name: string,
+        devices: number
      
 }
 
 type deviceListByBrand ={
-    "id": string,
-    "name": string,
-    "img": string,
-    "description": string
+    id: string,
+    name: string,
+    img: string,
+    description: string
 }
 
 type deviceDetails = {
-    "name": string,
-    "img": string,
-    "quickSpec": [
+    name: string,
+    img: string,
+    quickSpec: [
       {
-        "name": string,
-        "value": string
+        name: string,
+        value: string
       }
     ],
-    "detailSpec": [
+    detailSpec: [
 
         {
             category: String,
@@ -93,13 +93,21 @@ type deviceDetails = {
 
   type topDevices = [
     {
-      "category": string,
-      "list": [Array]
+      category: string,
+      list: [Array]
     },
     {
-        "category": string,
-        "list": [Array]
+        category: string,
+        list: [Array]
       }
   ]
 
+  type searchedDevices = [
+    {
+      id: string,
+      name: string,
+      img: string,
+      description: string
+    }
+  ]
   

@@ -1,6 +1,6 @@
 const gsmarena = require('gsmarena-api');
 
-export default async function getDeviceListByBrand(device: string) {
+export default async function searchForDevices(device: string) {
 
 
     try {

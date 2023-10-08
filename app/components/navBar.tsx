@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import React from "react";
-import Search from "./search";
+import SearchBar from "./SearchBar";
+
 
 export default function navBar() {
   return (
@@ -13,16 +14,14 @@ export default function navBar() {
         >Navbar</Link>
         <Link
             className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 "
-            aria-current="page"
+            
             href="/brands"
             data-te-nav-link-ref
+            
             >Brands</Link>
-     <Link
-            className="p-0 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none  lg:px-2 [&.active]:text-black/90 "
-            href="#"
-            data-te-nav-link-ref
-            >Link</Link>
-  <Search/>
+            <SearchBar/>
+
+  
 </nav>
   );
 }

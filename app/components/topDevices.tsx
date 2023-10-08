@@ -1,6 +1,6 @@
-import getTopDevices from '@/lib/getTopDevices'
+import getTopDevices from '@/api/getTopDevices'
 import Link from 'next/link'
-import DeviceCard from './deviceCard'
+import DeviceCard from './DeviceCard'
 
 import { notFound } from "next/navigation";
 

@@ -1,4 +1,4 @@
-import getAllBrands from "@/lib/getAllBrands";
+import getAllBrands from "@/api/getAllBrands";
 import Link from "next/link";
 
 export default async function brands() {

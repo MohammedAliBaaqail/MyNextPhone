@@ -1,4 +1,4 @@
-import getDeviceDetails from "@/lib/getDeviceDetails";
+import getDeviceDetails from "@/api/getDeviceDetails";
 import type { Metadata } from "next";
 import Image from "next/image";
 import placeHolderData from "./data.json";
@@ -13,10 +13,10 @@ type Params = {
 export async function generateMetadata({
   params: { deviceId },
 }: Params): Promise<Metadata> {
-  // const deviceDetailsData: Promise<deviceDetails> = getDeviceDetails(deviceId);
-  // const deviceDetails = await deviceDetailsData;
+  const deviceDetailsData: Promise<deviceDetails> = getDeviceDetails(deviceId);
+  const deviceDetails = await deviceDetailsData;
 
-  const deviceDetails = placeHolderData;
+  // const deviceDetails = placeHolderData;
   if (!deviceDetails) {
     return {
       title: "Device Not Found",
@@ -29,12 +29,12 @@ export async function generateMetadata({
 }
 
 export default async function deviceDetails({ params: { deviceId } }: Params) {
-  // const deviceDetailsData: Promise<deviceDetails> = getDeviceDetails(deviceId);
-  // const deviceDetails = await deviceDetailsData;
-  const deviceDetails = placeHolderData;
-  // console.log(deviceDetails.detailSpec[1])
+  const deviceDetailsData: Promise<deviceDetails> = getDeviceDetails(deviceId);
+  const deviceDetails = await deviceDetailsData;
+  // const deviceDetails = placeHolderData;
+
   if (!deviceDetails) return notFound();
-  // console.log(deviceDetails)
+
 
   // const fs = require("fs");
   // const saveData = (data: any) => {
@@ -67,10 +67,7 @@ export default async function deviceDetails({ params: { deviceId } }: Params) {
     }
   });
 
-  console.log("screenInfo", screenInfo);
-  console.log("cameraInfo", cameraInfo);
-  console.log("chipsetInfo", chipsetInfo);
-  console.log("batteryInfo", batteryInfo);
+
   return (
     <div>
       <h1 className="text-4xl py-4">{deviceDetails.name}</h1>

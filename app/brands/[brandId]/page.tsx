@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import getDeviceListByBrand from "@/lib/getDeviceListByBrand";
+import getDeviceListByBrand from "@/api/getDeviceListByBrand";
 
 import { notFound } from "next/navigation";
 
