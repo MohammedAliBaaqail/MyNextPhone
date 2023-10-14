@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 
 
 
-export default async function topDevices() {
+export default async function TopDevices() {
 
     const topDevicesData : Promise<topDevices> = getTopDevices()
     const topDevices = await topDevicesData
