@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import getAllBrands from "@/api/getAllBrands";
 import getDeviceListByBrand from "@/api/getDeviceListByBrand";
 import getTopDevices from "@/api/getTopDevices";

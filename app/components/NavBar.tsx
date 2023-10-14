@@ -3,7 +3,7 @@
 import Link from "next/link";
 import React from "react";
 import SearchBar from "./SearchBar";
-import Image from "next/image";
+
 
 
 export default function navBar() {
@@ -12,7 +12,7 @@ export default function navBar() {
   className="absolute top-0 px-6  flex w-full flex-nowrap items-center   py-2 text-neutral-500    lg:py-4"
   data-te-navbar-ref>
     <Link className="text-xl text-neutral-800 " href="/">
-      <Image
+      <img
         src="/images/logo.png"
         alt="logo"
         width={280}

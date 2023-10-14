@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+
 import searchForDevices from "@/api/searchForDevices";
 
 import SearchDevices from "./SearchDevices";

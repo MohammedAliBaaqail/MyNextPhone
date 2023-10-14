@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 
 import getAllBrands from "@/api/getAllBrands";
 import Link from "next/link";
@@ -19,7 +19,7 @@ export default async function BrandCard(props: brandProps) {
       <h2 className="text-3xl">{props.name}</h2>
       <h3 className="text-xl">{props.devices} Devices</h3>
       {props.img && (
-        <Image
+        <img
           className="w-1/4"
           src={props.img}
           alt={props.name}

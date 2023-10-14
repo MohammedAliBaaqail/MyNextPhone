@@ -1,6 +1,6 @@
 import getDeviceDetails from "@/api/getDeviceDetails";
 import type { Metadata } from "next";
-import Image from "next/image";
+
 import placeHolderData from "./data.json";
 
 import { notFound } from "next/navigation";
@@ -77,7 +77,7 @@ export default async function deviceDetails({ params: { deviceId } }: Params) {
         <h1 className=" text-4xl p-2  ">{deviceDetails.name}</h1>
         <section className="flex flex-row  mb-12 max-md:flex-wrap gradient_background">
           <div>
-            <Image
+            <img
               className="m-4"
               src={deviceDetails.img}
               alt={deviceDetails.name}
@@ -105,7 +105,7 @@ export default async function deviceDetails({ params: { deviceId } }: Params) {
               </div>
               <div className="w-full h-1/2 flex">
                 <div className="w-1/4 font-semibold text-center">
-                  <Image
+                  <img
                     className="mb-2 mx-auto"
                     src="/deviceInfoIcons/screen.png"
                     width={50}
@@ -123,7 +123,7 @@ export default async function deviceDetails({ params: { deviceId } }: Params) {
                 </div>
 
                 <div className="w-1/4 font-semibold text-center">
-                  <Image
+                  <img
                     className="mb-2 mx-auto"
                     src="/deviceInfoIcons/camera.png"
                     width={50}
@@ -141,7 +141,7 @@ export default async function deviceDetails({ params: { deviceId } }: Params) {
                 </div>
 
                 <div className="w-1/4 font-semibold text-center">
-                  <Image
+                  <img
                     className="mb-2 mx-auto"
                     src="/deviceInfoIcons/chipset.png"
                     width={50}
@@ -159,7 +159,7 @@ export default async function deviceDetails({ params: { deviceId } }: Params) {
                 </div>
 
                 <div className="w-1/4 font-semibold text-center">
-                  <Image
+                  <img
                     className="mb-2 mx-auto"
                     src="/deviceInfoIcons/battery.png"
                     width={50}
