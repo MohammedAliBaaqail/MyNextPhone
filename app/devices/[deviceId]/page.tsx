@@ -107,7 +107,7 @@ export default async function deviceDetails({ params: { deviceId } }: Params) {
                 <div className="w-1/4 font-semibold text-center">
                   <img
                     className="mb-2 mx-auto"
-                    src="/deviceInfoIcons/screen.png"
+                    src="/images/deviceInfoIcons/screen.png"
                     width={50}
                     height={50}
                     alt="img"
@@ -125,7 +125,7 @@ export default async function deviceDetails({ params: { deviceId } }: Params) {
                 <div className="w-1/4 font-semibold text-center">
                   <img
                     className="mb-2 mx-auto"
-                    src="/deviceInfoIcons/camera.png"
+                    src="/images/deviceInfoIcons/camera.png"
                     width={50}
                     height={50}
                     alt="img"
@@ -143,7 +143,7 @@ export default async function deviceDetails({ params: { deviceId } }: Params) {
                 <div className="w-1/4 font-semibold text-center">
                   <img
                     className="mb-2 mx-auto"
-                    src="/deviceInfoIcons/chipset.png"
+                    src="/images/deviceInfoIcons/chipset.png"
                     width={50}
                     height={50}
                     alt="img"
@@ -161,7 +161,7 @@ export default async function deviceDetails({ params: { deviceId } }: Params) {
                 <div className="w-1/4 font-semibold text-center">
                   <img
                     className="mb-2 mx-auto"
-                    src="/deviceInfoIcons/battery.png"
+                    src="/images/deviceInfoIcons/battery.png"
                     width={50}
                     height={50}
                     alt="img"
