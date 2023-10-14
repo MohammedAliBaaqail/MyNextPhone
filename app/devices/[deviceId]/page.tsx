@@ -35,7 +35,6 @@ export default async function deviceDetails({ params: { deviceId } }: Params) {
 
   if (!deviceDetails) return notFound();
 
-
   // const fs = require("fs");
   // const saveData = (data: any) => {
   //   const finished = (error: unknown) => {
@@ -47,6 +46,8 @@ export default async function deviceDetails({ params: { deviceId } }: Params) {
   // }
   // saveData(deviceDetails)
 
+
+//organize the data so that it is easier to use later on
   let screenInfo: { name: string; value: string }[] = [];
   let cameraInfo: { name: string; value: string }[] = [];
   let chipsetInfo: { name: string; value: string }[] = [];
@@ -69,20 +70,23 @@ export default async function deviceDetails({ params: { deviceId } }: Params) {
 
 
   return (
-    <div>
-      <h1 className="text-4xl py-4">{deviceDetails.name}</h1>
-      <section className="flex flex-row mt-4 mb-8 max-md:flex-wrap">
-        <div>
-          <Image
-            className="m-4"
-            src={deviceDetails.img}
-            alt={deviceDetails.name}
-            width={160}
-            height={212}
-          />
-        </div>
-        <div className="flex flex-grow  m-4">
-          {/* {deviceDetails.quickSpec.map((spec, index) => {
+    <div className="   bg-100000% bg-zoomed  custom_layout max-md:!bg-none " style={{
+      backgroundImage: `url(${deviceDetails.img})`
+      }}>
+      <div className={`rounded-t-lg overflow-hidden bg-[#ffffff59]  `}>
+        <h1 className=" text-4xl p-2  ">{deviceDetails.name}</h1>
+        <section className="flex flex-row  mb-12 max-md:flex-wrap gradient_background">
+          <div>
+            <Image
+              className="m-4"
+              src={deviceDetails.img}
+              alt={deviceDetails.name}
+              width={160}
+              height={212}
+            />
+          </div>
+          <div className="flex flex-grow  m-4">
+            {/* {deviceDetails.quickSpec.map((spec, index) => {
             return (
               <div className="min-h-max" key={index}>
                 {screenInfo.push(spec)}
@@ -92,110 +96,121 @@ export default async function deviceDetails({ params: { deviceId } }: Params) {
             );
           })} */}
 
-          <div className="flex flex-grow flex-col ">
-            <div className="w-full h-1/2">Announced {deviceDetails.detailSpec[1].specifications[0].value}</div>
-            <div className="w-full h-1/2">{deviceDetails.detailSpec[1].specifications[1].value}</div>
-            <div className="w-full h-1/2 flex">
-              
-            <div className="w-1/4 ">
-              <Image className="mb-2"
-                src="/deviceInfoIcons/screen.png"
-                width={50}
-                height={50}
-                alt="img"
-              />
-              {screenInfo.map((info) => {
-                return (
-                  <>
-                    {info.value}
-                    <br />
-                  </>
-                );
-              })}
-            </div>
+            <div className="flex flex-grow flex-col ">
+              <div className="w-full h-1/2">
+                Announced {deviceDetails.detailSpec[1].specifications[0].value}
+              </div>
+              <div className="w-full h-1/2">
+                {deviceDetails.detailSpec[1].specifications[1].value}
+              </div>
+              <div className="w-full h-1/2 flex">
+                <div className="w-1/4 font-semibold text-center">
+                  <Image
+                    className="mb-2 mx-auto"
+                    src="/deviceInfoIcons/screen.png"
+                    width={50}
+                    height={50}
+                    alt="img"
+                  />
+                  {screenInfo.map((info) => {
+                    return (
+                      <>
+                        {info.value}
+                        <br />
+                      </>
+                    );
+                  })}
+                </div>
 
-            <div className="w-1/4">
-              <Image className="mb-2"
-                src="/deviceInfoIcons/camera.png"
-                width={50}
-                height={50}
-                alt="img"
-              />
-              {cameraInfo.map((info) => {
-                return (
-                  <>
-                    {info.value}
-                    <br />
-                  </>
-                );
-              })}
-            </div>
+                <div className="w-1/4 font-semibold text-center">
+                  <Image
+                    className="mb-2 mx-auto"
+                    src="/deviceInfoIcons/camera.png"
+                    width={50}
+                    height={50}
+                    alt="img"
+                  />
+                  {cameraInfo.map((info) => {
+                    return (
+                      <>
+                        {info.value}
+                        <br />
+                      </>
+                    );
+                  })}
+                </div>
 
-            <div className="w-1/4">
-              <Image className="mb-2"
-                src="/deviceInfoIcons/chipset.png"
-                width={50}
-                height={50}
-                alt="img"
-              />
-              {chipsetInfo.map((info) => {
-                return (
-                  <>
-                    {info.value}
-                    <br />
-                  </>
-                );
-              })}
-            </div>
+                <div className="w-1/4 font-semibold text-center">
+                  <Image
+                    className="mb-2 mx-auto"
+                    src="/deviceInfoIcons/chipset.png"
+                    width={50}
+                    height={50}
+                    alt="img"
+                  />
+                  {chipsetInfo.map((info) => {
+                    return (
+                      <>
+                        {info.value}
+                        <br />
+                      </>
+                    );
+                  })}
+                </div>
 
-            <div className="w-1/4">
-              <Image className="mb-2"
-                src="/deviceInfoIcons/battery.png"
-                width={50}
-                height={50}
-                alt="img"
-              />
-              {batteryInfo.map((info) => {
-                return (
-                  <>
-                    {info.value}
-                    <br />
-                  </>
-                );
-              })}
-            </div>
+                <div className="w-1/4 font-semibold text-center">
+                  <Image
+                    className="mb-2 mx-auto"
+                    src="/deviceInfoIcons/battery.png"
+                    width={50}
+                    height={50}
+                    alt="img"
+                  />
+                  {batteryInfo.map((info) => {
+                    return (
+                      <>
+                        {info.value}
+                        <br />
+                      </>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
+      </div>
+
+      <section className="rounded-[inherit] p-3 rounded-t-lg bg-[#ffffff9e]">
+        
+
+        {deviceDetails.detailSpec.map((spec, index) => {
+          return (
+            <div key={index}>
+              <h2 className="text-4xl  mb-4">{spec.category}</h2>
+              <div>
+                {spec.specifications.map((subSpec, index) => {
+                  return (
+                    <>
+                      <hr className="my-1 border-[#00000012]" />
+                      <table key={index}>
+                        <tbody>
+                          <tr>
+                            <td className="w-32 font-bold">{subSpec.name}</td>
+                            <td className="">{subSpec.value}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </>
+                  );
+                })}
+              </div>
+                {index != (deviceDetails.detailSpec.length - 1) && <hr className="my-2 border-y-4 border-[#00000012]" />}
+       
+            </div>
+          );
+        })}
       </section>
-      <hr className="my-2 border-y-4" />
-
-      {deviceDetails.detailSpec.map((spec, index) => {
-        return (
-          <div key={index}>
-            <h2 className="text-3xl text-sky-500 mb-4">{spec.category}</h2>
-            <div>
-              {spec.specifications.map((subSpec, index) => {
-                return (
-                  <>
-                    <hr className="my-1" />
-                    <table key={index}>
-                      <tbody>
-                        <tr>
-                          <td className="w-32 font-bold">{subSpec.name}</td>
-                          <td className="">{subSpec.value}</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </>
-                );
-              })}
-            </div>
-
-            <hr className="my-2 border-y-4" />
-          </div>
-        );
-      })}
     </div>
   );
 }

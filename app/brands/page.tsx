@@ -1,5 +1,6 @@
 import getAllBrands from "@/api/getAllBrands";
 import Link from "next/link";
+import BrandCard from "../components/BrandCard";
 
 export default async function brands() {
   const brandsData: Promise<brand[]> = getAllBrands();
@@ -7,13 +8,9 @@ export default async function brands() {
 
 
   return (
-    <div>
+    <div className=" flex flex-wrap justify-center custom_layout py-10 px-3 ">
       {brands.map((brand) => (
-        <div>
-            <Link href={`/brands/${brand.id}`}>
-          <h2>{brand.name}</h2>
-          </Link>
-        </div>
+        <BrandCard key={brand.id} {...brand}/>
       ))}
     </div>
   );

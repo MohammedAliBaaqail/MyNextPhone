@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import getDeviceListByBrand from "@/api/getDeviceListByBrand";
 
 import { notFound } from "next/navigation";
+import DeviceCard from "@/app/components/DeviceCard";
 
 type Params = {
   params: {
@@ -11,35 +12,37 @@ type Params = {
 export async function generateMetadata({
   params: { brandId },
 }: Params): Promise<Metadata> {
-    const brandDevicesData: Promise<deviceListByBrand[]> = getDeviceListByBrand(brandId);
-    const brandDevices = await brandDevicesData;
-    
-    if (!brandDevices){
-      return {
-        title: "Brand Not Found"
-      }
-    }
+  const brandDevicesData: Promise<deviceListByBrand[]> =
+    getDeviceListByBrand(brandId);
+  const brandDevices = await brandDevicesData;
+
+  if (!brandDevices) {
+    return {
+      title: "Brand Not Found",
+    };
+  }
   return {
     title: brandId,
-    description: brandId
+    description: brandId,
   };
 }
 
 export default async function brandDevices({ params: { brandId } }: Params) {
-    const brandDevicesData: Promise<deviceListByBrand[]> = getDeviceListByBrand(brandId);
-    const brandDevices = await brandDevicesData;
-    if (!brandDevices) return notFound()
-  return(
-   <div>
-    {brandDevices.map((device)=>{
-      return(
-        <div>
-        <h2>{device.name}</h2>
-        {/* <h2>{device.description}</h2> */}
-        
-
-        </div>)
-    })}
-  </div>
-  )
+  const brandDevicesData: Promise<deviceListByBrand[]> =
+    getDeviceListByBrand(brandId);
+  const brandDevices = await brandDevicesData;
+  if (!brandDevices) return notFound();
+  return (
+    <div className=" flex flex-wrap justify-center custom_layout py-10 px-3 ">
+      {brandDevices.map((device) => {
+        return (
+          <DeviceCard
+            deviceId={device.id}
+            name={device.name}
+            img={device.img}
+          />
+        );
+      })}
+    </div>
+  );
 }

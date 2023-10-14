@@ -11,7 +11,7 @@ export default async function SearchDevices({ params: { query } }: Params) {
   const searchedDevices: Promise<searchedDevices> = searchForDevices(query);
   const filteredDevices = await searchedDevices;
   return (
-    <div className=" flex flex-wrap justify-center ">
+    <div className=" flex flex-wrap justify-center custom_layout py-10 md:px-3 ">
       {filteredDevices.map((device) => {
         return (
       

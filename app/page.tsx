@@ -5,6 +5,7 @@ import getDeviceListByBrand from "@/api/getDeviceListByBrand"
 import getTopDevices from "@/api/getTopDevices"
 import TopDevices from "./components/topDevices"
 import Link from "next/link"
+import Hero from "./components/Hero"
 
 
 
@@ -26,9 +27,12 @@ export default async function Home() {
 
 
   return (
-    <div className="min-h-screen">
+    <>
+    <Hero/>
+    <div className="min-h-screen max-w-5xl custom_layout py-8">
         
       <TopDevices/>
     </div>
+      </>
   )
 }

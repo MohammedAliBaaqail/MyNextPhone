@@ -13,28 +13,28 @@ export default async function topDevices() {
     // console.log(topDevices[1].list)
     if (!topDevices) return notFound()
   return (
-    <div>
-        
+    <div >
+        <h1 className='text-5xl text-center mb-4'>Popular Devices</h1>
         {
         topDevices.map((devicesList)=>{
             return(
-             <>
-             {<h2 className='text-3xl'>{devicesList.category}</h2>}
-             <div>
+             <div className=''>
+             {<h2 className='text-3xl mx-4  mb-3 mt-10'>{devicesList.category}</h2>}
+             <div className='flex flex-wrap flex-row justify-evenly'>
              {devicesList.list.map((device)=>{
                 return(
                     
-                    <Link href={`/devices/${device.id}`}>
                     
-                   <DeviceCard deviceId={device.id} name={device.name} />
-                   {/* <h3>{device.dailyHits|device.favorites}</h3> */}
-                   </Link>
+                    
+                   <DeviceCard key={device.id} deviceId={device.id} name={device.name} img={"/images/phone.jpg"} />
+                
+                  
                   
                 )
              }
              )}
               </div>
-             </>)
+             </div>)
              }
              )
              }
