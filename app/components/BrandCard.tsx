@@ -10,7 +10,7 @@ type brandProps = {
   img?: string;
 };
 
-export default async function brandCard(props: brandProps) {
+export default async function BrandCard(props: brandProps) {
   return (
     <Link
       href={`/brands/${props.id}`}

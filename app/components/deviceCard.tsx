@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import getDeviceDetails from "@/api/getDeviceDetails";
-import { Container } from "postcss";
+
 
 type deviceIdProps = {
   deviceId: string;
@@ -9,7 +9,7 @@ type deviceIdProps = {
   img?: string;
 };
 
-export default async function deviceCard(props: deviceIdProps) {
+export default async function DeviceCard(props: deviceIdProps) {
   // const deviceDetailsData: Promise<deviceDetails> = getDeviceDetails(props.deviceId);
   // const deviceDetails = await deviceDetailsData;
   
