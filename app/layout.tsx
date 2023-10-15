@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "My Next Phone",
@@ -22,6 +23,9 @@ export default function RootLayout({
           
           {children}
           </main>
+          <footer className="w-full max-h-max  hero_bg bg-cover bg-center">
+        <Footer />
+      </footer>
       </body>
     </html>
   );
