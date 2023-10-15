@@ -14,8 +14,8 @@ export default function navBar() {
       <img
         src="/images/logo.png"
         alt="logo"
-        width={280}
-        height={280}
+        width={320}
+        height={320}
       />
         </Link>
         <SearchBar/>

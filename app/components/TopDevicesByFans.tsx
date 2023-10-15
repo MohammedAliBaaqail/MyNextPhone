@@ -12,7 +12,7 @@ export default async function TopDevicesByFans() {
   return (
     <div className="">
       {
-        <h2 className="text-5xl   text-center mb-6">
+        <h2 className="text-5xl text-blue-700   text-center mb-6 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] mt-full max-md:ml-auto max-md:text-center max-md:mt-32">
           {topDevices[1].category}
         </h2>
       }

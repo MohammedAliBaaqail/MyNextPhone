@@ -63,7 +63,7 @@ export default function TopBrands() {
       
     </div>
     <div className="flex justify-center">
-    <Link className="text-3xl p-7 mx-auto mb-8 bg-white border border-gray-200 rounded-lg shadow  md:max-w-xl hover:bg-gray-100 max-sm:w-full " href="/brands">All Brands</Link>
+    <Link className="text-3xl  p-7 mx-auto  bg-white border border-gray-200 rounded-lg shadow  md:max-w-xl hover:bg-gray-100  mb-8" href="/brands">All Brands</Link>
     </div>
     </>
   );
