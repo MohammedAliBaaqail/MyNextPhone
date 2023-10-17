@@ -17,14 +17,18 @@ export default async function TopDevicesByFans() {
         </h2>
       }
       <div className="flex flex-wrap flex-row justify-evenly">
-        {topDevices[0].list.map((device) => {
+        {topDevices[0].list.map((device, index: number) => {
+          let isEven = index % 2 === 0;
           return (
+            
             <DeviceCard
               key={device.id}
               deviceId={device.id}
               name={device.name}
               img={"/images/phone.jpg"}
-            />
+              isEven={isEven}
+                          />
+                         
           );
         })}
       </div>

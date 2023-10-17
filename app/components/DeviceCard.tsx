@@ -7,6 +7,7 @@ type deviceIdProps = {
   deviceId: string;
   name: string;
   img?: string;
+  isEven?: boolean;
 };
 
 export default async function DeviceCard(props: deviceIdProps) {
@@ -16,7 +17,7 @@ export default async function DeviceCard(props: deviceIdProps) {
   return (
     <Link
       href={`/devices/${props.deviceId}`}
-      className="w-full md:w-5/12 props.img m-3 flex flex-row items-center bg-white border border-gray-200 rounded-lg shadow  md:max-w-xl hover:bg-gray-100 "
+      className={`${props.isEven ? "fadeInLeft" : "fadInRight"} w-full md:w-5/12 props.img m-3 flex flex-row items-center bg-white border border-gray-200 rounded-lg shadow  md:max-w-xl hover:bg-gray-100 `}
     >
       {props.img && (
         <Image
