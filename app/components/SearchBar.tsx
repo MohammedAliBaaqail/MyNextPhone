@@ -21,7 +21,7 @@ export default function SearchBar() {
     router.push("/search/" + searchQuery);
   };
   return (
-    <div className="w-96 max-w-md ">
+    <div className="w-96 max-w-full ">
       <div className="relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden shadow-lg">
         <div className="grid place-items-center h-full w-12 text-gray-300">
           <svg
