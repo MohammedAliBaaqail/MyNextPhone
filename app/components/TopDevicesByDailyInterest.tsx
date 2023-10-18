@@ -4,9 +4,8 @@ import DeviceCard from "./DeviceCard";
 
 import { notFound } from "next/navigation";
 
-export default async function TopDevicesByFans() {
-  const topDevicesData: Promise<topDevices> = getTopDevices();
-  const topDevices = await topDevicesData;
+export default async function TopDevicesByFans(topDevices:topDevices ) {
+
 
   if (!topDevices) return notFound();
   return (

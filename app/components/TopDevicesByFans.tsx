@@ -4,9 +4,9 @@ import DeviceCard from "./DeviceCard";
 
 import { notFound } from "next/navigation";
 
-export default async function TopDevicesByFans() {
-  const topDevicesData: Promise<topDevices> = getTopDevices();
-  const topDevices = await topDevicesData;
+export default async function TopDevicesByFans(topDevices: topDevices) {
+  // const topDevicesData: Promise<topDevices> = getTopDevices();
+  // const topDevices = await topDevicesData;
   // console.log(topDevices[1].list)
   if (!topDevices) return notFound();
   return (
@@ -17,7 +17,7 @@ export default async function TopDevicesByFans() {
         </h2>
       }
       <div className="flex flex-wrap flex-row justify-evenly">
-      {topDevices[1].list.map((device, index: number) => {
+        {topDevices[1].list.map((device, index: number) => {
           let isEven = index % 2 === 0;
           return (
             <DeviceCard

@@ -4,6 +4,7 @@ import TopBrands from "./components/TopBrands";
 import TopDevicesByFans from "./components/TopDevicesByFans";
 import TopDevicesByDailyInterest from "./components/TopDevicesByDailyInterest";
 import { Metadata } from "next";
+import getTopDevices from "@/api/getTopDevices";
 
 
 
@@ -15,7 +16,10 @@ export const metadata: Metadata = {
   // }
 };
 export default async function Home() {
+  const topDevicesData: Promise<topDevices> = getTopDevices();
+  const topDevices = await topDevicesData;
 
+  
 
   return (
     <>
@@ -23,14 +27,14 @@ export default async function Home() {
 
       <section className="  py-8 custom_layout">
         {/* <TopDevices /> */}
-        <TopDevicesByFans />
+        <TopDevicesByFans {...topDevices} />
       </section>
       <section className=" w-full max-h-max  hero_bg bg-cover bg-center  ">
         <TopBrands />
       </section>
       <section className="  py-8 custom_layout">
         {/* <TopDevices /> */}
-        <TopDevicesByDailyInterest />
+        <TopDevicesByDailyInterest {...topDevices} />
       </section>
 
     </>

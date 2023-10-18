@@ -193,7 +193,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-.fadInRight{
+.fadeInRight{
   animation: fadeInRightAnimation linear both;
   animation-timeline: view(block);
   animation-range: entry 5% cover 15%;
@@ -257,5 +257,18 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 768px) {
   * {
     transition-property: none !important;
+    animation: none;
+  }
+  .zoomIn{
+    animation: none;
+  }
+  .fadein{
+    animation: none;
+  }
+  .fadeInLeft{
+    animation: none;
+  }
+  .fadeInRight{
+    animation: none;
   }
 }
