@@ -19,7 +19,7 @@ export default async function DeviceCard(props: deviceIdProps) {
       href={`/devices/${props.deviceId}`}
       className={`${props.isEven ? "fadeInLeft" : "fadInRight"} w-full md:w-5/12 props.img m-3 flex flex-row items-center bg-white border border-gray-200 rounded-lg shadow  md:max-w-xl hover:bg-gray-100 `}
     >
-      {props.img && (
+      {(deviceDetails.img || props.img) && (
         <Image
           className="w-1/4"
           src={deviceDetails.img}
