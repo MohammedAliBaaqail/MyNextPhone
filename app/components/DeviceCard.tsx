@@ -11,8 +11,8 @@ type deviceIdProps = {
 };
 
 export default async function DeviceCard(props: deviceIdProps) {
-  // const deviceDetailsData: Promise<deviceDetails> = getDeviceDetails(props.deviceId);
-  // const deviceDetails = await deviceDetailsData;
+  const deviceDetailsData: Promise<deviceDetails> = getDeviceDetails(props.deviceId);
+  const deviceDetails = await deviceDetailsData;
   
   return (
     <Link
@@ -22,7 +22,7 @@ export default async function DeviceCard(props: deviceIdProps) {
       {props.img && (
         <Image
           className="w-1/4"
-          src={props.img}
+          src={deviceDetails.img}
           alt={props.name}
           width={100}
           height={100}

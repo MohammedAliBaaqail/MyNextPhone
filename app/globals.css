@@ -180,12 +180,12 @@ body::-webkit-scrollbar-thumb {
 .fadeInLeft{
   animation: fadeInLeftAnimation linear both;
   animation-timeline: view(block);
-  animation-range: entry 10% cover 20%;
+  animation-range: entry 5% cover 15%;
 }
 @keyframes fadeInLeftAnimation {
   0% {
     opacity: 0;
-    transform: translate3d(-30%, 0, 0);
+    transform: translate3d(-20%, 0, 0);
   }
   100% {
     opacity: 1;
@@ -196,13 +196,13 @@ body::-webkit-scrollbar-thumb {
 .fadInRight{
   animation: fadeInRightAnimation linear both;
   animation-timeline: view(block);
-  animation-range: entry 10% cover 20%;
+  animation-range: entry 5% cover 15%;
 }
 
 @keyframes fadeInRightAnimation {
   0% {
     opacity: 0;
-    transform: translate3d(30%, 0, 0);
+    transform: translate3d(20%, 0, 0);
   }
   100% {
     opacity: 1;
@@ -219,19 +219,19 @@ body::-webkit-scrollbar-thumb {
 @keyframes zoomInAnimation {
   0% {
     opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.8, 0.8, 0.8);
   }
   15%{
     opacity: 1;
     transform: scale3d(1, 1, 1);
   }
-  85%{
+  90%{
     opacity: 1;
     transform: scale3d(1, 1, 1);
   }
   100% {
     opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.8, 0.8, 0.8);
   }
 }
 /* .zoomOut{

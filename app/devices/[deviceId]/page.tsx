@@ -1,7 +1,7 @@
 import getDeviceDetails from "@/api/getDeviceDetails";
 import type { Metadata } from "next";
 
-import placeHolderData from "./data.json";
+
 
 import { notFound } from "next/navigation";
 
@@ -18,7 +18,7 @@ export async function generateMetadata({
   const deviceDetailsData: Promise<deviceDetails> = getDeviceDetails(deviceId);
   const deviceDetails = await deviceDetailsData;
 
-  // const deviceDetails = placeHolderData;
+
   if (!deviceDetails) {
     return {
       title: "Device Not Found",
@@ -33,20 +33,11 @@ export async function generateMetadata({
 export default async function deviceDetails({ params: { deviceId } }: Params) {
   const deviceDetailsData: Promise<deviceDetails> = getDeviceDetails(deviceId);
   const deviceDetails = await deviceDetailsData;
-  // const deviceDetails = placeHolderData;
+
 
   if (!deviceDetails) return notFound();
 
-  // const fs = require("fs");
-  // const saveData = (data: any) => {
-  //   const finished = (error: unknown) => {
-  //     if (error) console.log("brblm");
-  //     return;
-  //   };
-  //   const saveData = JSON.stringify(data);
-  //   fs.writeFile("data.json", saveData, finished);
-  // }
-  // saveData(deviceDetails)
+
 
 
 //organize the data so that it is easier to use later on
