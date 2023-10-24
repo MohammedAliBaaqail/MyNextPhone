@@ -12,18 +12,20 @@ export default async function SearchDevices({ params: { query } }: Params) {
   const filteredDevices = await searchedDevices;
   return (
     <div className=" flex flex-wrap justify-center custom_layout py-10 md:px-3 ">
-      {filteredDevices.map((device) => {
+      {filteredDevices.map((device,index: number) => {
+          let isEven = index % 2 === 0;
         return (
       
             <DeviceCard
               deviceId={device.id}
               name={device.name}
               img={device.img}
+              isEven={isEven}
             />
         
         );
       })}
-      {/* <DeviceCard deviceId={query} name={query}/> */}
+
     </div>
   );
 }

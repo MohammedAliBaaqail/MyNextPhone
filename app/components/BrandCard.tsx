@@ -13,7 +13,7 @@ type brandProps = {
 export default async function BrandCard(props: brandProps) {
   return (
     <Link
-      href={`/brands/${props.id}`}
+      href={`/brands/${props.id}/1`}
       className="zoomIn zoomOut p-2 w-3/12 m-4 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow  md:max-w-xl hover:bg-gray-100 max-sm:w-full "
     >
 

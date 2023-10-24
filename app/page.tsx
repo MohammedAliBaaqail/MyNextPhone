@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 export default async function Home() {
   const topDevicesData: Promise<topDevices> = getTopDevices();
   const topDevices = await topDevicesData;
+  console.log(topDevices)
 
   
 

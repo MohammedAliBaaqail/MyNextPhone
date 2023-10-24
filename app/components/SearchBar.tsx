@@ -1,9 +1,7 @@
 "use client";
 
 
-import searchForDevices from "@/api/searchForDevices";
 
-import SearchDevices from "./SearchDevices";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -54,16 +52,4 @@ export default function SearchBar() {
   );
 }
 
-// <div className='searchbar mx-auto' >
-//   <div className='searchbar__item'>
 
-//     {/* <SearchDevices   /> */}
-//     {/* <SearchButton otherClasses='sm:hidden' /> */}
-
-//     <form className='searchbar__form' onSubmit={handleSubmit}>
-//     <input type="text" placeholder="Search" value={searchQuery} onChange={(e) => setQuery(e.target.value)} />
-//     </form>
-
-//   </div>
-
-// </div>

@@ -33,6 +33,18 @@ export default async function brandDevices({ params: { brandId } }: Params) {
   const brandDevices = await brandDevicesData;
   if (!brandDevices) return notFound();
   return (
-    <h1>brandDevices</h1>
+    <div className=" flex flex-wrap justify-center custom_layout py-10 px-3 ">
+      {brandDevices.map((device, index) => {
+        let isEven = index % 2 === 0;
+        return (
+          <DeviceCard
+            deviceId={device.id}
+            name={device.name}
+            img={device.img}
+            isEven={isEven}
+          />
+        );
+      })}
+    </div>
   );
 }
