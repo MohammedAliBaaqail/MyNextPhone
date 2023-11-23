@@ -56,15 +56,26 @@ export default function TopBrands() {
   ];
   return (
     <>
-    <div className="flex flex-row flex-wrap justify-center py-6  ">
-      {topBrands.map((brand) => {
-        return <BrandCard key={brand.id} id={brand.id}  name={brand.name} img={brand.img} />;
-      })}
-      
-    </div>
-    <div className="flex justify-center">
-    <Link className="text-3xl  p-7 mx-auto  bg-white border border-gray-200 rounded-lg shadow  md:max-w-xl hover:bg-gray-100  mb-8" href="/brands">All Brands</Link>
-    </div>
+      <div className="flex flex-row flex-wrap justify-center py-6  ">
+        {topBrands.map((brand) => {
+          return (
+            <BrandCard
+              key={brand.id}
+              id={brand.id}
+              name={brand.name}
+              img={brand.img}
+            />
+          );
+        })}
+      </div>
+      <div className="flex justify-center">
+        <Link
+          className="text-3xl  p-7 mx-auto  bg-white border border-gray-200 rounded-lg shadow  md:max-w-xl hover:bg-gray-100  mb-8"
+          href="/brands"
+        >
+          All Brands
+        </Link>
+      </div>
     </>
   );
 }
