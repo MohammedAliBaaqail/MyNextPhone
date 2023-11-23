@@ -1,15 +1,4 @@
 "use strict";
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -47,36 +36,31 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-exports.metadata = void 0;
-var Hero_1 = require("./components/Hero");
-var TopBrands_1 = require("./components/TopBrands");
-var TopDevicesByFans_1 = require("./components/TopDevicesByFans");
-var TopDevicesByDailyInterest_1 = require("./components/TopDevicesByDailyInterest");
-var getTopDevices_1 = require("@/api/getTopDevices");
-exports.metadata = {
-    title: "My Next Phone",
-    description: "Your Guide To Get The Perfict Phone For You!"
-};
-function Home() {
+var DeviceCard_1 = require("./DeviceCard");
+var navigation_1 = require("next/navigation");
+var getDeviceDetails_1 = require("@/api/getDeviceDetails");
+function TopDevicesByFans(topDevices) {
     return __awaiter(this, void 0, void 0, function () {
-        var topDevicesData, topDevices;
+        var devicesImgPromises, devicesImg;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    topDevicesData = getTopDevices_1["default"]();
-                    return [4 /*yield*/, topDevicesData];
+                    if (!topDevices)
+                        return [2 /*return*/, navigation_1.notFound()];
+                    devicesImgPromises = topDevices[1].list.map(function (device) {
+                        return getDeviceDetails_1["default"](device.id).then(function (deviceDetails) { return deviceDetails.img; });
+                    });
+                    return [4 /*yield*/, Promise.all(devicesImgPromises)];
                 case 1:
-                    topDevices = _a.sent();
-                    return [2 /*return*/, (React.createElement(React.Fragment, null,
-                            React.createElement(Hero_1["default"], null),
-                            React.createElement("section", { className: "  py-8 custom_layout" },
-                                React.createElement(TopDevicesByFans_1["default"], __assign({}, topDevices))),
-                            React.createElement("section", { className: " w-full max-h-max  hero_bg bg-cover bg-center  " },
-                                React.createElement(TopBrands_1["default"], null)),
-                            React.createElement("section", { className: "  py-8 custom_layout" },
-                                React.createElement(TopDevicesByDailyInterest_1["default"], __assign({}, topDevices)))))];
+                    devicesImg = _a.sent();
+                    return [2 /*return*/, (React.createElement("div", { className: "" },
+                            React.createElement("h2", { className: "text-5xl text-[#005bea] text-center mb-6 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] mt-full max-md:ml-auto max-md:text-center max-md:mt-32" }, topDevices[1].category),
+                            React.createElement("div", { className: "flex flex-wrap flex-row justify-evenly" }, topDevices[1].list.map(function (device, index) {
+                                var isEven = index % 2 === 0;
+                                return (React.createElement(DeviceCard_1["default"], { key: device.id, deviceId: device.id, name: device.name, img: devicesImg[index], isEven: isEven }));
+                            }))))];
             }
         });
     });
 }
-exports["default"] = Home;
+exports["default"] = TopDevicesByFans;
