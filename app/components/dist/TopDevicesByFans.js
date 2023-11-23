@@ -54,7 +54,7 @@ function TopDevicesByFans(topDevices) {
                 case 1:
                     devicesImg = _a.sent();
                     return [2 /*return*/, (React.createElement("div", { className: "" },
-                            React.createElement("h2", { className: "text-5xl text-[#005bea] text-center mb-6 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] mt-full max-md:ml-auto max-md:text-center max-md:mt-32" }, topDevices[1].category),
+                            React.createElement("h2", { className: "text-5xl text-[#005bea] text-center mb-6 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] mt-full max-md:ml-auto max-md:text-center max-md:mt-6" }, topDevices[1].category),
                             React.createElement("div", { className: "flex flex-wrap flex-row justify-evenly" }, topDevices[1].list.map(function (device, index) {
                                 var isEven = index % 2 === 0;
                                 return (React.createElement(DeviceCard_1["default"], { key: device.id, deviceId: device.id, name: device.name, img: devicesImg[index], isEven: isEven }));
