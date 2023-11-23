@@ -63,7 +63,7 @@ export default async function deviceDetails({ params: { deviceId } }: Params) {
 
 
   return (
-    <div className="fade_instance   bg-100000% bg-zoomed  custom_layout max-md:!bg-none " style={{
+    <div className="fade_instance   bg-100000% bg-zoomed  custom_layout max-md:mx-3 max-md:my-6  " style={{
       backgroundImage: `url(${deviceDetails.img})`
       }}>
       <div className={`rounded-t-lg overflow-hidden bg-[#ffffff59]  `}>

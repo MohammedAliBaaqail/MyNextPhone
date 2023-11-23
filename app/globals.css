@@ -79,9 +79,13 @@ body::-webkit-scrollbar-thumb {
   /* background: rgb(3,108,229);
   background: linear-gradient(323deg, rgba(3,108,229,1) 26%, rgba(3,211,229,1) 66%, rgba(188,213,243,1) 100%); */
   background-image: linear-gradient(to top, #005bea 0%, #00c6fb 100%);
+
   /* background-image: radial-gradient(circle at 52% 33%, rgba(17, 17, 17,0.08) 0%, rgba(17, 17, 17,0.08) 33.333%,rgba(74, 74, 74,0.08) 33.333%, rgba(74, 74, 74,0.08) 66.666%,rgba(130, 130, 130,0.08) 66.666%, rgba(130, 130, 130,0.08) 99.999%),radial-gradient(circle at 70% 65%, rgba(129, 129, 129,0.08) 0%, rgba(129, 129, 129,0.08) 33.333%,rgba(95, 95, 95,0.08) 33.333%, rgba(95, 95, 95,0.08) 66.666%,rgba(60, 60, 60,0.08) 66.666%, rgba(60, 60, 60,0.08) 99.999%),radial-gradient(circle at 97% 89%, rgba(21, 21, 21,0.08) 0%, rgba(21, 21, 21,0.08) 33.333%,rgba(89, 89, 89,0.08) 33.333%, rgba(89, 89, 89,0.08) 66.666%,rgba(156, 156, 156,0.08) 66.666%, rgba(156, 156, 156,0.08) 99.999%),linear-gradient(177deg, rgb(60,185,255),rgb(3,108,229)); */
 }
 
+.hero_img img{
+  filter: drop-shadow(36px 0px 5px rgba(0,0,0,0.2));
+}
 .nav_bg{
   background-image: linear-gradient(to top, #00c6fb 0%, #00c6fb 100%);
 }
@@ -271,6 +275,13 @@ body::-webkit-scrollbar-thumb {
   .fadeInRight{
     animation: none;
   }
+
+  .gradient_background{
+    background: linear-gradient(360deg, #00000000,#ffffff00, #ffffffba, #ffffff, #ffffff);
+  }
+  .custom_layout{
+    margin: 24px 12px ;
+  }
 }
 
 
@@ -329,3 +340,4 @@ body::-webkit-scrollbar-thumb {
   
   transform: scale(1.3);
 }
+

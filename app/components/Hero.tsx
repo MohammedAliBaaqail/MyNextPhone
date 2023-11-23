@@ -11,7 +11,7 @@ export default function Hero() {
         <h1 className=" drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] mt-full max-md:ml-auto max-md:text-center max-md:mt-32">
         Discover Your <br/> <span className="text-white ">Next</span> Phone
         </h1></div>
-      <div className="  w-2/5  self-end  max-md:self-center max-md:mt-auto  max-md:w-3/4 "><img src="/images/hero_1.png" alt=""/></div>
+      <div className="hero_img  w-2/5  self-end  max-md:self-center max-md:mt-auto  max-md:w-3/4 "><img src="/images/hero_1.png" alt=""/></div>
 
     </section>
   )

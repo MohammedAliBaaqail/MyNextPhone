@@ -12,7 +12,7 @@ export default function SearchBar() {
   const [searchQuery, setQuery] = useState("");
 
   useEffect(() => {
-    console.log(searchQuery);
+  
   }, [searchQuery]);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
