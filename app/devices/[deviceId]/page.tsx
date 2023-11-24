@@ -115,7 +115,7 @@ export default async function deviceDetails({ params: { deviceId } }: Params) {
                   })}
                 </div>
 
-                <div className="w-1/4 font-semibold text-center">
+                <div className="w-1/4 font-semibold text-center ">
                   <img
                     className="mb-2 mx-auto"
                     src="/images/deviceInfoIcons/camera.png"

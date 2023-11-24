@@ -296,8 +296,9 @@ body::-webkit-scrollbar-thumb {
     background: linear-gradient(
       360deg,
       #00000000,
-      #ffffff00,
-      #ffffffba,
+      #ffffff22,
+      #ffffff94,
+      rgb(255, 255, 255),
       #ffffff,
       #ffffff
     );
