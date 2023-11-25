@@ -15,12 +15,12 @@ const config: Config = {
           'hero': "url('../public/images/hero.jpg')",
       },
       backgroundSize: {
-
-        '100000%': '100000%',
-    
+        
+        '100000%': '11850%',
+        
       },
       backgroundPosition: {
-        'zoomed': '-130000px -673200px',
+        'zoomed': '32% 8834%',
       },
     },
   },
