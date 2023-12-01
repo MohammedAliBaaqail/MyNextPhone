@@ -67,7 +67,7 @@ export default async function deviceDetails({ params: { deviceId } }: Params) {
       backgroundImage: `url(${deviceDetails.img})`
       }}>
       <div className={`rounded-t-lg overflow-hidden bg-[#ffffff59]  `}>
-        <h1 className=" text-4xl p-2  ">{deviceDetails.name}</h1>
+        <h1 className=" text-4xl font-bold p-2  ">{deviceDetails.name}</h1>
         <section className="flex flex-row  mb-12 max-md:flex-wrap gradient_background">
           <div>
             <img
@@ -180,7 +180,7 @@ export default async function deviceDetails({ params: { deviceId } }: Params) {
         {deviceDetails.detailSpec.map((spec, index) => {
           return (
             <div key={index}>
-              <h2 className="text-4xl  mb-4">{spec.category}</h2>
+              <h2 className="text-3xl font-bold  mb-2 max-md:text-xl">{spec.category}</h2>
               <div>
                 {spec.specifications.map((subSpec, index) => {
                   return (
@@ -189,8 +189,8 @@ export default async function deviceDetails({ params: { deviceId } }: Params) {
                       <table key={index}>
                         <tbody>
                           <tr>
-                            <td className="w-32 font-bold">{subSpec.name}</td>
-                            <td className="">{subSpec.value}</td>
+                            <td className="w-32 font-bold max-md:text-xs max-md:w-24">{subSpec.name}</td>
+                            <td className="max-md:text-[10px]">{subSpec.value}</td>
                           </tr>
                         </tbody>
                       </table>
