@@ -67,7 +67,7 @@ export default async function deviceDetails({ params: { deviceId } }: Params) {
       backgroundImage: `url(${deviceDetails.img})`
       }}>
       <div className={`rounded-t-lg overflow-hidden bg-[#ffffff59]  `}>
-        <h1 className=" text-4xl font-bold p-2  ">{deviceDetails.name}</h1>
+        <h1 className=" text-4xl font-bold p-2 max-md:text-2xl  ">{deviceDetails.name}</h1>
         <section className="flex flex-row  mb-12 max-md:flex-wrap gradient_background">
           <div>
             <img

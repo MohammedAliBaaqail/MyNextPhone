@@ -28,7 +28,7 @@ export default async function DeviceCard(props: deviceIdProps) {
       />
 
       <div className="flex flex-col justify-between p-4 leading-normal">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
+        <h5 className=" text-2xl font-bold tracking-tight text-gray-900 max-md:text-lg">
           {props.name}
         </h5>
         <p className="mb-3 font-normal text-gray-700 "></p>
