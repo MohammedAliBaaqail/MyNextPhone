@@ -10,8 +10,6 @@ type deviceIdProps = {
 };
 
 export default async function DeviceCard(props: deviceIdProps) {
- 
-
   return (
     <Link
       href={`/devices/${props.deviceId}`}
@@ -21,7 +19,7 @@ export default async function DeviceCard(props: deviceIdProps) {
     >
       <img
         className="w-1/4"
-        src={ props.img}
+        src={props.img}
         alt={props.name}
         width={100}
         height={100}

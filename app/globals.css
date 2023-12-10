@@ -83,7 +83,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .hero_img img {
-  filter: drop-shadow(36px 0px 5px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(-32px 35px 7px rgba(0,0,0,.2));
 }
 .nav_bg {
   background-image: linear-gradient(to top, #00c6fb 0%, #00c6fb 100%);
