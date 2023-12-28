@@ -31,7 +31,7 @@ export default function TopBrands() {
     {
       name: "OnePlus",
       img: "/images/oneplus.png",
-      id: "oneplus-phones-9",
+      id: "oneplus-phones-95",
     },
     {
       name: "Oppo",
