@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import "./globals.css";
 import type { Metadata } from "next";
 
@@ -26,6 +27,7 @@ export default function RootLayout({
         <main className="rounded-xl  ">
           
           {children}
+          <Analytics />
           </main>
           <footer className="w-full max-h-max  hero_bg bg-cover bg-center">
         <Footer />
